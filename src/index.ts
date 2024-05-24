@@ -51,7 +51,7 @@ export async function main(){
     Billboard.create(monsterEntity2, {})
     const monsterEntity3 = engine.addEntity();
     GltfContainer.create(monsterEntity3, {
-        src: 'images/Monster2.glb',
+        src: 'images/Monster3.glb',
     });
     Transform.create(monsterEntity3, {
         position: Vector3.create(24, -100, 24),
@@ -91,6 +91,11 @@ export async function main(){
                             transform.position.y = -200;
                             const transform2 = Transform.getMutable(monsterEntity2);
                             transform2.position.y = -1;
+                        }else if(globalState.level === 3){
+                            const transform2 = Transform.getMutable(monsterEntity2);
+                            transform2.position.y = -200;
+                            const transform3 = Transform.getMutable(monsterEntity3);
+                            transform3.position.y = -1;
                         }
 
                     }
